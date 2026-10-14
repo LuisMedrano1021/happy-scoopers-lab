@@ -17,3 +17,4 @@ models:
           - accepted_values:
               arguments:
                 values: ['Entre semana', 'Fin de semana', 'N/A']
+

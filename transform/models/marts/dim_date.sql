@@ -50,3 +50,4 @@ unknown_member as (
 select * from calendario
 union all
 select * from unknown_member
+
