@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Tablas del OLTP cargadas sin transformar mediante dlt."
+    tables:
+      - name: products
+        description: "Productos del catálogo."
+      - name: product_departments
+        description: "Departamentos de productos."
+      - name: product_categories
+        description: "Categorías de productos."
+      - name: product_subcategories
+        description: "Subcategorías de productos."
+      - name: units_of_measure
+        description: "Unidades de medida."

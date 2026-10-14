@@ -18,3 +18,24 @@ models:
               arguments:
                 values: ['Entre semana', 'Fin de semana', 'N/A']
 
+  - name: dim_product
+    description: >
+      Dimensión Producto conformada. Una fila por producto desnormalizando
+      categoría, subcategoría, departamento y unidad de medida.
+      Incluye una fila desconocido (product_key = '-1').
+    columns:
+      - name: product_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: "Llave de negocio natural del OLTP."
+        data_tests:
+          - not_null
+      - name: is_discontinued
+        description: "Estado de discontinuidad: 'Sí', 'No' o 'N/A'."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Sí', 'No', 'N/A']
