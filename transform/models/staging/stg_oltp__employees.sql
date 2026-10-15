@@ -13,3 +13,4 @@ select
     address_id,
     manager_id
 from source
+

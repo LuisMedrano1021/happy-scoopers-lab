@@ -10,3 +10,4 @@ select
     region,
     subregion
 from source
+

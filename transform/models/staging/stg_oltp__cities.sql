@@ -7,3 +7,4 @@ select
     province_id,
     population
 from source
+

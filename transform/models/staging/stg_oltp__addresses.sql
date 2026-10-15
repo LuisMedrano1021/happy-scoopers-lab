@@ -8,3 +8,4 @@ select
     city_id,
     postal_code
 from source
+

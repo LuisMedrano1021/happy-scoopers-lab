@@ -8,3 +8,4 @@ select
     country_id,
     population
 from source
+
