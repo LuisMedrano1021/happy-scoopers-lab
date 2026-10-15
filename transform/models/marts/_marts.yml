@@ -39,3 +39,19 @@ models:
           - accepted_values:
               arguments:
                 values: ['Sí', 'No', 'N/A']
+
+  - name: dim_employee
+    description: >
+      Dimensión Empleado conformada (SCD2). Una fila por empleado,
+      con geografía aplanada y organigrama resuelto mediante self-join.
+      Incluye una fila desconocido (employee_key = '-1').
+    columns:
+      - name: employee_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null
+      - name: employee_id
+        description: "Llave de negocio natural del OLTP."
+        data_tests:
+          - not_null

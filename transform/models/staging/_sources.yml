@@ -15,3 +15,13 @@ sources:
         description: "Subcategorías de productos."
       - name: units_of_measure
         description: "Unidades de medida."
+      - name: employees
+        description: "Empleados del negocio."
+      - name: addresses
+        description: "Direcciones físicas."
+      - name: cities
+        description: "Ciudades."
+      - name: provinces
+        description: "Provincias o estados."
+      - name: countries
+        description: "Países."
