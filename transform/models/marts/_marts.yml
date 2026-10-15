@@ -71,3 +71,15 @@ models:
         description: "Llave de negocio natural del OLTP."
         data_tests:
           - not_null
+
+  - name: dim_customer
+    description: >
+      Dimensión Cliente conformada (SCD2).
+      Reúsa dim_location como dimensión conforme para las dos direcciones (entrega y facturación).
+      Incluye una fila desconocido (customer_key = '-1').
+    columns:
+      - name: customer_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null

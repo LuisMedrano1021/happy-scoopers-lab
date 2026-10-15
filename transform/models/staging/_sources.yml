@@ -25,3 +25,5 @@ sources:
         description: "Provincias o estados."
       - name: countries
         description: "Países."
+      - name: customers
+        description: "Clientes del negocio."
