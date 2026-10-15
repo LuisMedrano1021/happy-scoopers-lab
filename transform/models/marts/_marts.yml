@@ -99,3 +99,20 @@ models:
         description: "Llave de negocio natural del OLTP."
         data_tests:
           - not_null
+
+  - name: dim_promotion
+    description: >
+      Dimensión Catálogo de Promociones (SCD1).
+      Campañas, descuentos y fechas. El miembro desconocido (-1)
+      es vital para las ventas que no aplican promoción.
+    columns:
+      - name: promotion_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null
+      - name: promotion_id
+        description: "Llave de negocio natural del OLTP."
+        data_tests:
+          - not_null
+

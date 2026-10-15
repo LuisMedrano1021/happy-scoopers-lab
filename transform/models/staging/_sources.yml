@@ -29,3 +29,5 @@ sources:
         description: "Clientes del negocio."
       - name: payment_types
         description: "Catálogo de tipos de pago (Cash, Check, etc.)."
+      - name: promotions
+        description: "Catálogo de promociones y descuentos."
