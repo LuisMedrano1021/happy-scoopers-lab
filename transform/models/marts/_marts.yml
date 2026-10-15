@@ -55,3 +55,19 @@ models:
         description: "Llave de negocio natural del OLTP."
         data_tests:
           - not_null
+
+  - name: dim_location
+    description: >
+      Dimensión Conforme de Localización Geográfica (SCD2).
+      Una fila por dirección, aplanando ciudad, provincia, país y continente.
+      Incluye una fila desconocido (location_key = '-1').
+    columns:
+      - name: location_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null
+      - name: address_id
+        description: "Llave de negocio natural del OLTP."
+        data_tests:
+          - not_null
