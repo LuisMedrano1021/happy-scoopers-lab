@@ -9,3 +9,4 @@ select
     discount_amount,
     discount_percentage
 from source
+
