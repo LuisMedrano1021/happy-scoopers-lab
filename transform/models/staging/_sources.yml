@@ -27,3 +27,5 @@ sources:
         description: "Países."
       - name: customers
         description: "Clientes del negocio."
+      - name: payment_types
+        description: "Catálogo de tipos de pago (Cash, Check, etc.)."

@@ -83,3 +83,19 @@ models:
         data_tests:
           - unique
           - not_null
+
+  - name: dim_payment_type
+    description: >
+      Dimensión Catálogo de Tipo de Pago (SCD1).
+      Catálogo enumerado estable sin jerarquía ni historial.
+      Incluye una fila desconocido (payment_type_key = '-1').
+    columns:
+      - name: payment_type_key
+        description: "Llave subrogada única generada por dbt_utils."
+        data_tests:
+          - unique
+          - not_null
+      - name: payment_type_id
+        description: "Llave de negocio natural del OLTP."
+        data_tests:
+          - not_null
